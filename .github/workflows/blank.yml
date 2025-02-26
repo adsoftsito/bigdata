@@ -19,7 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container: apache/spark:3.5.4-scala2.12-java17-python3-r-ubuntu
+    #container: apache/spark:3.5.4-scala2.12-java17-python3-r-ubuntu
 
     #container: bitnami/spark:sha256-6adad33c3bbb65f20f328e6e6f37efdfd7aefafffdd172b31c617a5e3aef77bc
 
@@ -29,20 +29,20 @@ jobs:
     #- uses: actions/checkout@v2
 
 
-#    - uses: actions/setup-python@v5
-#      with:
-#        python-version: '3.10'
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
 
-#    - uses: actions/setup-java@v4
-#      with:
-#        java-version: '21'
-#        distribution: temurin
+    - uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: temurin
 
-#    - uses: vemonet/setup-spark@v1
-#      with:
-#        spark-version: '3.5.3'
-#        hadoop-version: '3'
+    - uses: vemonet/setup-spark@v1
+      with:
+        spark-version: '3.5.3'
+        hadoop-version: '3'
 
     - run: spark-submit --version
-   # - run: spark-submit --master local hello.py
+    - run: spark-submit --master local hello.py
 
