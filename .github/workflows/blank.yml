@@ -38,3 +38,5 @@ jobs:
         hadoop-version: '3'
 
     - run: spark-submit --version
+    - run: spark-submit --master local hello.py
+
