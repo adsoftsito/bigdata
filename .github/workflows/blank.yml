@@ -26,7 +26,7 @@ jobs:
     #container: spark:python3-java17 
 
     steps:
-    - uses: actions/checkout@v2
+    #- uses: actions/checkout@v2
 
 
 #    - uses: actions/setup-python@v5
@@ -44,5 +44,5 @@ jobs:
 #        hadoop-version: '3'
 
     - run: spark-submit --version
-    - run: spark-submit --master local hello.py
+   # - run: spark-submit --master local hello.py
 
