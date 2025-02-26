@@ -19,7 +19,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container: spark:python3-java17
+    container: bitnami/spark:sha256-6adad33c3bbb65f20f328e6e6f37efdfd7aefafffdd172b31c617a5e3aef77bc
+
+    #container: spark:python3-java17
 
     steps:
     - uses: actions/checkout@v2
