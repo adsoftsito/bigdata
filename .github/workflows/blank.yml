@@ -55,7 +55,7 @@ jobs:
         databaseType: firestore
         path: results
         doc: myresult2
-        value: "{'test': 'test from dispatch'}"
+        value: '${{ toJson({ "test": "confetti"}) }}'
         
 
 
