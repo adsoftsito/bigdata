@@ -48,15 +48,25 @@ jobs:
     - run: spark-submit --master local hello.py
     - run: ls -la
     - run: ls test  
-            
-    - uses: w9jds/firebase-trigger@v1.1.0
-      with:
-        credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
-        databaseUrl: https://big-data-a3266.firebaseio.com
-        databaseType: firestore
-        path: results
-        doc: myresult2
-        value: ${{ secrets.FIREBASE_CREDENTIALS }}
+    
+    - name: GIT commit and push docs
+      env: 
+        CI_COMMIT_MESSAGE: save spark results
+        CI_COMMIT_AUTHOR: adsoft
+      run: |
+        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+        git config --global user.email "adsoft@live.com.mx"
+        git add test
+        git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git push
+#    - uses: w9jds/firebase-trigger@v1.1.0
+#      with:
+#        credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
+#        databaseUrl: https://big-data-a3266.firebaseio.com
+#        databaseType: firestore
+#        path: results
+#        doc: myresult2
+#        value: ${{ secrets.FIREBASE_CREDENTIALS }}
         
 
 
