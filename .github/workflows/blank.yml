@@ -50,6 +50,6 @@ jobs:
         credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
         databaseUrl: https://big-data-a3266.firebaseio.com
         databaseType: firestore
-        path: version/lastRelease
-        doc: lastRelease
+        path: results
+        doc: myresult
         value: ${{ github.event.head_commit.message }}
