@@ -48,14 +48,15 @@ jobs:
 #    - run: spark-submit --master local hello.py
     - run: ls -la
 #    - run: cat test.json  
-    - uses: w9jds/firebase-trigger@v1.1.0
-      with:
-        credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
-        databaseUrl: https://big-data-a3266.firebaseio.com
-        databaseType: firestore
-        path: results
-        doc: myresult2
-        value: '${{ toJson({ "test": "confetti"}) }}'
+            
+#    - uses: w9jds/firebase-trigger@v1.1.0
+#      with:
+#        credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
+#        databaseUrl: https://big-data-a3266.firebaseio.com
+#        databaseType: firestore
+#        path: results
+#        doc: myresult2
+#        value: ${{ fromJson("{'test': 'linux'}" ) }}
         
 
 
