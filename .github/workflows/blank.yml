@@ -51,7 +51,7 @@ jobs:
     - run: spark-submit --version
     - run: spark-submit --master local hello.py
     - run: ls -la
-    - run: ls test  
+    - run: ls results  
     
     - name: GIT commit and push docs
       env: 
@@ -60,7 +60,7 @@ jobs:
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "adsoft@live.com.mx"
-        git add test
+        git add results
         git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
 #    - uses: w9jds/firebase-trigger@v1.1.0
