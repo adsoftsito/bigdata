@@ -49,14 +49,14 @@ jobs:
     - run: ls -la
     - run: ls test  
             
-#    - uses: w9jds/firebase-trigger@v1.1.0
-#      with:
-#        credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
-#        databaseUrl: https://big-data-a3266.firebaseio.com
-#        databaseType: firestore
-#        path: results
-#        doc: myresult2
-#        value: ${{ fromJson("{'test': 'linux'}" ) }}
+    - uses: w9jds/firebase-trigger@v1.1.0
+      with:
+        credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
+        databaseUrl: https://big-data-a3266.firebaseio.com
+        databaseType: firestore
+        path: results
+        doc: myresult2
+        value: ${{ secrets.FIREBASE_CREDENTIALS }}
         
 
 
