@@ -45,7 +45,6 @@ jobs:
 
  #   - run: spark-submit --version
  #   - run: spark-submit --master local hello.py
-
     - uses: w9jds/firebase-trigger@v1.1.0
       with:
         credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
