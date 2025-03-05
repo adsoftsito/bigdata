@@ -47,7 +47,7 @@ jobs:
     - run: spark-submit --version
     - run: spark-submit --master local hello.py
     - run: ls -la
-    - run: cat test.json  
+    - run: ls test  
             
 #    - uses: w9jds/firebase-trigger@v1.1.0
 #      with:
