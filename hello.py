@@ -4,7 +4,8 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("HelloWorld").getOrCreate()
 
 # Use sql() to write a raw SQL query
-df = spark.sql("SELECT 'Hello World' as column_1")
+df = spark.sql("SELECT 'Hello World' as hello")
 
 # Print the dataframe
 df.show()
+df.write.json("test.json")
