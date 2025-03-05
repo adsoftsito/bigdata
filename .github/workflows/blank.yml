@@ -53,5 +53,5 @@ jobs:
         databaseUrl: https://big-data-a3266.firebaseio.com
         databaseType: firestore
         path: results
-        doc: myresult
+        doc: myresult2
         value: ${{ github.event.head_commit.message }}
