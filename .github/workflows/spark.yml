@@ -49,7 +49,10 @@ jobs:
         hadoop-version: '3'
 
     - run: spark-submit --version
-    - run: spark-submit --master local hello.py
+    - run: wget -O app.py https://raw.githubusercontent.com/adsoftsito/bigdata/refs/heads/main/spark-submit/people.py
+    - run: wget -O people.csv https://raw.githubusercontent.com/adsoftsito/bigdata/refs/heads/main/datasets/people.csv   
+    - run: ls -la
+    - run: spark-submit --master local app.py people.csv
     - run: ls -la
     - run: ls results  
     
