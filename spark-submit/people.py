@@ -24,7 +24,7 @@ if __name__ == "__main__":
     #results = df_people_1903_1906.toJSON().collect()
     #print(results)
     df_people_1903_1906.write.mode("overwrite").json("results")
-    df_people_1903_1906.coalesce(1).write.json('data_merged.json')
+    df_people_1903_1906.coalesce(1).write.json('results/data_merged.json')
 
 
     query='SELECT sex,COUNT(sex) FROM people WHERE birth BETWEEN "1903-01-01" AND "1911-12-31" GROUP BY sex'
