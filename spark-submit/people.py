@@ -21,7 +21,9 @@ if __name__ == "__main__":
     query='SELECT name, `birth` FROM people WHERE `birth` BETWEEN "1903-01-01" AND "1950-12-31" ORDER BY `birth`'
     df_people_1903_1906 = spark.sql(query)
     df_people_1903_1906.show(20)
-    df_people_1903_1906.write.mode("overwrite").json("results")
+    results = df_people_1903_1906.toJSON().collect()
+    print(results)
+    results.write.mode("overwrite").json("results")
 
     query='SELECT sex,COUNT(sex) FROM people WHERE birth BETWEEN "1903-01-01" AND "1911-12-31" GROUP BY sex'
     df_people_1903_1906_sex = spark.sql(query)
