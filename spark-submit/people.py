@@ -7,8 +7,8 @@ if __name__ == "__main__":
         .appName("people")\
         .getOrCreate()
 
-    print("read people.csv ... ")
-    path_people="people.csv"
+    print("read dataset.csv ... ")
+    path_people="dataset.csv"
     df_people = spark.read.csv(path_people,header=True,inferSchema=True)
     df_people = df_people.withColumnRenamed("date of birth", "birth")
     df_people.createOrReplaceTempView("people")
