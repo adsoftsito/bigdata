@@ -12,3 +12,5 @@
 [Slides 1](https://docs.google.com/presentation/d/1vgs6ani0TRjazlf232yasT5Ci-6EZQVV/edit?usp=sharing&ouid=112454259737266877874&rtpof=true&sd=true)
 [Slides 2](https://docs.google.com/presentation/d/13hVS4emRvgeyAQz6tyMwUN4mg0axEDp8/edit?usp=sharing&ouid=112454259737266877874&rtpof=true&sd=true)
 
+# week 4
+[reto](https://docs.google.com/presentation/d/1-fznJ_PAh2AeT9k0nnQMv-1nhLOjpPtS/edit?usp=sharing&ouid=112454259737266877874&rtpof=true&sd=true)
