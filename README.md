@@ -1,4 +1,5 @@
 # Big Data
+[lista clase](https://docs.google.com/spreadsheets/d/1NrCNw6o5KZBdZZVSCHKploOBoyP4tHctQOkAb_8Qmz0/edit?usp=sharing)
 
 # week 1
 [Slides 1](https://docs.google.com/presentation/d/1FEq22r4F0eaCKhYHv21UAQ84_kXBtLf9/edit?usp=sharing&ouid=112454259737266877874&rtpof=true&sd=true)
